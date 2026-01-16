@@ -51,7 +51,7 @@ export function useSpeedTest() {
       for (let i = 0; i < 10; i++) {
         if (signal.aborted) return;
         const start = performance.now();
-        await fetch("http://localhost:8000/test/ping/", {
+        await fetch("https://mystarlinkstats-backend.vercel.app/test/ping/", {
           cache: "no-store",
           signal,
         });
@@ -83,7 +83,7 @@ export function useSpeedTest() {
       const streams = 3;
       const promises = Array.from({ length: streams }).map(async (_, i) => {
         const response = await fetch(
-          `http://localhost:8000/test/download/?size=${10 * 1024 * 1024}`,
+          `https://mystarlinkstats-backend.vercel.app/test/download/?size=${10 * 1024 * 1024}`,
           {
             signal,
             cache: "no-store",
