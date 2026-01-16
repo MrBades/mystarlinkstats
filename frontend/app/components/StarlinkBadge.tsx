@@ -15,7 +15,7 @@ export function StarlinkBadge() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:8000/test/network-info/')
+        fetch('https://mystarlinkstats-backend.vercel.app/test/network-info/')
             .then(res => res.json())
             .then(data => {
                 setInfo(data);
