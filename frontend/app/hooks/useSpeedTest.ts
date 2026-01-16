@@ -137,7 +137,7 @@ export function useSpeedTest() {
       // but we can measure end-to-end.
       // For better progress, we could chunk it manually, but let's do a single burst for max throughput.
 
-      await fetch("http://localhost:8000/test/upload/", {
+      await fetch("https://mystarlinkstats-backend.vercel.app/test/upload/", {
         method: "POST",
         body: blob,
         signal,
